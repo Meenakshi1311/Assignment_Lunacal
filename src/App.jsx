@@ -10,9 +10,11 @@ import {
 function App() {
   const [activeTab, setActiveTab] = useState("About Me");
   const [images, setImages] = useState([
-    "https://placehold.co/300x319",
-    "https://placehold.co/300x319",
-    "https://placehold.co/300x319",
+    "https://placehold.co/190X179",
+    "https://placehold.co/190X179",
+    "https://placehold.co/190X179",
+    "https://placehold.co/190X179",
+    "https://placehold.co/190X179",
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -92,16 +94,26 @@ function App() {
               </div>
             )}
             {activeTab === "Experiences" && (
-              <div className="w-[720px]">
-                <p className="text-gray-300">
-                  Here are some of my experiences...
+              <div>
+              <p className="text-gray-300">
+                  Hello! I'm Dave, your sales rep here from Salesforce. I've been
+                  working at this awesome company for 3 years now. I was born and
+                  raised in Albany, NY & have been living in Santa Carla for the
+                  past 10 years my wife Tiffany and my 4 year old twin daughters-
+                  Emma and Ella. Both of them are just starting school, so my
+                  calender is usually blocked between 9–10 AM. This is a...
                 </p>
               </div>
             )}
             {activeTab === "Recommended" && (
-              <div className="w-[720px]">
-                <p className="text-gray-300">Here are some recommendations...</p>
-              </div>
+              <p className="text-gray-300">
+                  Hello! I'm Dave, your sales rep here from Salesforce. I've been
+                  working at this awesome company for 3 years now. I was born and
+                  raised in Albany, NY & have been living in Santa Carla for the
+                  past 10 years my wife Tiffany and my 4 year old twin daughters-
+                  Emma and Ella. Both of them are just starting school, so my
+                  calender is usually blocked between 9–10 AM. This is a...
+                </p>
             )}
           </div>
         </div>
@@ -135,8 +147,8 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="mt-4 gallery-container flex justify-between">
-            {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
+          <div className="mt-4 gallery-container flex space-x-12">
+            {images.slice(currentIndex, currentIndex + 5).map((image, index) => (
               <img
                 key={index}
                 src={image}
